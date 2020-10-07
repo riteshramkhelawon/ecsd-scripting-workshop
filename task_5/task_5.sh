@@ -1,23 +1,33 @@
 #! /usr/bin/env bash
 
 #1
-systemPassword="pass"
+#systemPassword="pass"
+#
+#while [[ $userPassword != $systemPassword ]]; do
+#	echo -n "Enter password:"
+#	read userPassword
+#done		
+#
+#echo "correct password"
+#
+#exit 0
 
-echo -n "Enter password"
-read userPassword
+#2
+echo -n "Enter range start number:"
+read rangeStart
 
-if(( $userPassword=="password" )); then
-	echo $userPassword " is the Correct password"
-	exit 0
-else
-	while [$userPassword != $systemPassword]; do
-		echo -n "Enter password"
-  		read userPassword
-	done		
-fi
+echo -n "Enter range end number:"
+read rangeEnd
+
+total=0
+count=$rangeStart
+while [[ $count <= $rangeEnd ]]; do
+	$tempTotal = count ** 2
+	total = $total+tempTotal
+	$count = $((count+1))
+done
+
+echo $total
 
 exit 0
-
-//2
-
 
