@@ -1,10 +1,8 @@
-//1
-myNumber=150
-
-if [ $myNumber<150 ]; then
+#1
+if(($1<150)); then
 	echo "number smaller than 150"
 	exit 0
-elseif [ $myNumber == 150 ]; then
+elif(($1 == 150)); then
 	echo "number is 150"
 	exit 1
 else
@@ -12,8 +10,8 @@ else
 	exit 2
 fi
 
-
-//2
-//run print statement  every 15 minutes
-*/15 * * * * echo "cron job"
+#2
+#in crontab file 
+#the following would run this script every minute of every day
+* * * * * ./task_3.sh
 
